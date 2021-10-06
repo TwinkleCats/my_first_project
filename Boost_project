@@ -1,0 +1,18 @@
+#include<iostream>
+#include <boost/function.hpp>
+//function은 함수포인터를 정의할 수 있는 라이브러리이다. 
+
+using std::cout;
+using std::endl;
+
+int f(int a, int b)
+{
+	return a+b;
+}
+
+int main()
+{
+//꺽쇠괄호로 반환 타입, 인자 값들의 개수와 타입을 지정할 수 있다.
+	boost::function<int(int, int)>fp=f;
+}
+
